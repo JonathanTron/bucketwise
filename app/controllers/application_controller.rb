@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate
 
+  before_filter :set_locale
+
   filter_parameter_logging :password
 
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
@@ -51,7 +53,10 @@ class ApplicationController < ActionController::Base
       request.format == Mime::XML
     end
     helper_method :via_api?
-
+    
+    def set_locale
+      I18n.locale = locale_from_user(user) if user.locale.present?
+    end
   private
 
     def self.acceptable_includes(*list)
@@ -76,5 +81,9 @@ class ApplicationController < ActionController::Base
       end
 
       return options
+    end
+    
+    def locale_from_user(user)
+      I18n.available_locales.include?(user.locale.to_sym) ? user.locale : 'en'
     end
 end
