@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      account: Account
+      account_item: Account Item
+      actor: Actor
+      bucket: Bucket
+      event: Event
+      line_item: Line Item
+      query_filter: Query Filter
+      statement: Statement
+      subscription: Subscription
+      tag: Tag
+      tagged_items: Tagged Items
+      user: User
+      user_subscription: User Subscription
+    attributes:
+      

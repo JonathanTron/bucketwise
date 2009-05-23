@@ -1,0 +1,198 @@
+en:
+  $: "$"
+  summary: Summary
+  log_out: "log out"
+  bucketwise: "BucketWise"
+  bucketwise_version: "BucketWise version: <span class=\"version\">v{{version}} (rev <a href=\"https://github.com/jamis/bucketwise/commit/{{rev}}\">{{rev}}</a>)</span>"
+  last_deployed: "Last deployed: <span class=\"version\">{{last}}</span>"
+  accounts:
+    account: 
+      see_all_buckets: "See all {{bucket_size}} buckets"
+    form:
+      Errors: Errors
+      account_could_not_be_saved: "The account could not be saved because of the following error(s):"
+      account_info: "Account Info"
+      choose_a_name: "Choose a name"
+      for_this_account: "for this account:"
+      what_kind: "What kind"
+      of_account_is_this: "of account is this?"
+      Checking: Checking
+      Credit_card: Credit card
+      Other: Other
+      starting_balance: Starting balance
+      take_a_look_at_your_latest_statement_for_this_account: "Take a look at your latest statement for this account."
+      note_the_current_balance_from_the_statement: "Note the <em>current balance</em> from the statement, as well as the <em>date the statement was issued</em>, and enter them below."
+      what_is_the_current_balance: "What is the <strong>current balance</strong>:"
+      when_was_the_statement_issued: "<strong>When</strong> was the statement issued:"
+      create_this_account: "Create this account"
+      cancel: "cancel"
+    name:
+      resume_reconciling: "Resume reconciling"
+      reconcile: "Reconcile"
+      prior_statements: "Prior statements"
+      rename: "Rename"
+      delete: "Delete"
+      are_your_sure_you_want_to_delete_this_account: "Are you sure you want to delete this account?"
+    show:
+      dashboard: "Dashboard"
+      buckets_in_account: "Buckets in {{account_name}}"
+    update:
+      buckets_in_account: "Buckets in {{account_name}}"
+      the_account_could_not_be_updated: "The account could not be updated:"
+  buckets:
+    bucket_name_for_perma:
+      rename: Rename
+      delete_merge: "Delete/Merge"
+    delete_form:
+      delete_merge: "Delete/Merge"
+      to_delete_this_bucket: "To delete this bucket, you'll need to move the transactions from \"{{bucket_name}}\" into another bucket."
+      please_select_that_other_bucket: "Please select that other bucket:"
+      merge_and_delete_this_bucket: "Merge and delete this bucket"
+      or: or
+      cancel: Cancel
+    index:
+      dashboard: "Dashboard"
+      transactions_in_account_name: "Transactions in {{account_name}}"
+      buckets_in_account_name: "Buckets in {{account_name}}"
+      include: "Include:"
+      expenses: Expenses
+      deposits: Deposits
+      reallocations: Reallocations
+      from: "From:"
+      to: "To:"
+      apply_these_critera: "Apply these criteria"
+      cancel: "cancel"
+      reset_this_filter: "reset this filter"
+    show:
+      dashboard: "Dashboard"
+      transactions_in_account_name: "Transactions in {{account_name}}"
+      buckets_in_account_name: "Buckets in {{account_name}}"
+      the_bucket_could_not_be_updated: "The bucket could not be updated:"
+  events:
+    balance:
+      ending_balance: "Ending balance"
+      current_balance: "Current balance"
+    form:
+      your_transation_has_been_recorded: "Your transaction has been recorded. You may enter another one, or {{link}}."
+      close_this_form: "close this form"
+      edit_this_transaction: "Edit this transaction"
+      record_this_transaction: "Record this transaction"
+      or: or
+      cancel: cancel
+    form_general:
+      general_information: "General Information"
+      when_did_this_expense_occur: "<strong>When</strong> did this expense occur?"
+      when_did_this_deposit_occur: "<strong>When</strong> did this deposit occur?"
+      when_did_this_transfer_occur: "<strong>When</strong> did this transfer occur?"
+      who_received_the_payment: "<strong>Who</strong> received the payment?"
+      where_did_this_deposit_come_from: "<strong>Where</strong> did this deposit come from?"
+      what_was_this_transfer_for: "<strong>What</strong> was this transfer for?"
+      recall: "(recall)"
+      how_much_was_paid: "<strong>How much</strong> was paid?"
+      how_much_was_deposited: "<strong>How much</strong> was deposited?"
+      how_much_was_transferred: "<strong>How much</strong> was transferred?"
+      got_more_to_say: "Got more to say?"
+      add_a_more_verbose_description: "Add a more verbose description..."
+      describe_this_transaction: "Describe this transaction:"
+    form_reallocate:
+      reallocate_funds: "Reallocate funds"
+      which_bucket_are_you_reallocating_funds: "<strong>Which bucket</strong> are you reallocating funds <strong>{{verb}}</strong>?"
+      more_buckets_please: "More buckets, please!"
+    form_section:
+      check: "<strong>Check #</strong>"
+      specify_repayment_option: "Specify repayment options"
+      money_from_this_bucket_will_be_transferred_to: "Money from this bucket will be transferred to an \"Aside\" bucket, to be used later to pay off this credit."
+      more_buckets_please: "More buckets, please!"
+    form_tags:
+      i_d_like_to_add_tags: "I'd like to add tags for this transaction..."
+      tags: Tags
+      tags_for_this_transaction: "Tags for this transaction:"
+      enter_tag_names: "Enter tag names, separated by commas, that will apply to this entire transaction."
+      i_d_like_to_add_tags_for_parts_of_this_transaction: "I'd like to add tags for parts of this transaction..."
+      specify_an_amount_for_each_tag: "Specify an amount for each tag. That amount will then be marked by that tag."
+      more_tags_please: "More tags, please!"
+    reallocation_item:
+      amount: amount
+    tagged_item:
+      is_tagged_as: "is tagged as"
+    create:
+      this_transaction_could_not_be_saved: "This transaction could not be saved:"
+    edit:
+      edit_transaction: "Edit transaction"
+    new:
+      new_transaction: "New transaction"
+    update:
+      this_transaction_could_not_be_saved: "This transaction could not be saved:"
+  sessions:
+    new:
+      log_into_bucketwise: "Log into BucketWise"
+      the_user_name_or_password_you_gave_was_incorrect: "The user name or password you gave was incorrect. Please try again."
+      you_have_been_logged_out: "You have been logged out."
+      user_name: "User name:"
+      password: "Password:"
+  statements:
+    subtotal:
+      subtotal: "Subtotal:"
+      remaining: "Remaining:"
+    edit:
+      balance_your_statement: "Balance your statement"
+      statement_date: "Statement date"
+      starting_balance: "Starting balance"
+      ending_balance: "Ending balance"
+      deposits: "Deposits"
+      checks: "Checks"
+      other_expenses: "Other expenses"
+      congratulations: "Congratulations!"
+      your_records_exactly_match_your_account_statement: "Your records exactly match your account statement, and everything balances."
+      close_out_this_statement: "Close out this statement"
+      save_for_later: "Save for later"
+      abort_this_reconciliation: "abort this reconciliation"
+      are_you_sure_you_want_to_discard_this_reconciliation: "Are you sure you want to discard this reconciliation?"
+    index:
+      dashboard: "Dashboard"
+      previous_statements: "Previous Statements"
+      you_have_not_yet_balanced_this_account_against: "You have not yet balanced this account against any statements from your financial institution. You may start by clicking {{link}}, to begin balancing this account."
+      lets_reconcile_your_account: "Let's reconcile your {{account_name}} account"
+      first_take_a_look: "First, take a look at the account statement from your bank or other financial institution."
+      if_you_havent_reconciled_in_a_while: "If you haven't reconciled in a while, make sure you start with the <em>oldest</em> statement and work forward."
+      when_was_the_statement_printed: "<strong>When</strong> was the statement printed?"
+      what_is_the_ending_balance: "<strong>What</strong> is the ending balance?"
+      got_to_step_2: "Go to step #2"
+      cancel: "cancel"
+    show:
+      dashboard: "Dashboard"
+      prior_statements: "Prior statements"
+      delete: "Delete"
+      are_you_sure_you_want_to_delete_this_statement: "Are you sure you want to delete this statement?"
+      statement_for_period_ending: "Statement for period ending"
+  subscriptions:
+    blank_slate:
+      welcome: "Welcome to BucketWise!"
+      to_get_started: "<strong>To get started</strong>, you'll need to create at least one account (a bank account, credit card account, etc). \"Accounts\" are where your money is actually stored."
+      click_here_to_create_your_first_account: "Click here to create your first account"
+      once_you_ve_created: "<strong>Once you've created</strong> your first account, you can create more accounts, record transactions, and basically get on with keeping your finances under control!"
+    index:
+      your_subscriptions: "Your Subscriptions"
+    show:
+      expense: "expense"
+      deposit: "deposit"
+      transfer: "transfer"
+      record_a_new: "Record a new {{expense}}, {{deposit}}, or {{transfer}}"
+      recent_transactions: "Recent transactions"
+      add_an_account: "Add an account"
+      accounts_summary: "Accounts summary"
+      tags: "Tags"
+  tags:
+    delete_form:
+      delete_merge: "Delete/Merge"
+      delete_the_tag: "Delete the \"{{tag_name}}\" tag"
+      merge_the_tag_into: "Merge the \"{{tag_name}}\" tag into"
+      delete_this_tag: "Delete this tag"
+      cancel: "Cancel"
+      or: or
+    name:
+      transactions_tagged: "Transactions tagged \"{{tag_name}}\""
+      rename: "Rename"
+      delete: "Delete"
+    show:
+      dashboard: "Dashboard"

@@ -1,0 +1,17 @@
+fr-FR:
+  activerecord:
+    models:
+      account: Compte
+      account_item: 
+      actor: Acteur
+      bucket: Réserve de liquidités
+      event: Evênement
+      line_item: 
+      query_filter: Filtre
+      statement: Relevé
+      subscription: Abonnement
+      tag: tag
+      tagged_items: 
+      user: Utilisateur
+      user_subscription: Abonnement de l'utilisateur
+    attributes:

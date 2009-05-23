@@ -1,7 +1,7 @@
-en:
+fr-FR:
   $: "$"
   summary: Summary
-  logout: "log out"
+  log_out: "log out"
   bucketwise: "BucketWise"
   bucketwise_version: "BucketWise version: <span class=\"version\">v{{version}} (rev <a href=\"https://github.com/jamis/bucketwise/commit/{{rev}}\">{{rev}}</a>)</span>"
   last_deployed: "Last deployed: <span class=\"version\">{{last}}</span>"
