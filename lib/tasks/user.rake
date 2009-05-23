@@ -9,9 +9,10 @@ namespace :user do
     email = ui.ask("E-mail: ")
     user_name = ui.ask("User name: ")
     password = ui.ask("Password: ")
+    locale = ui.ask("Locale (en, fr, ...) :")
 
     user = User.create(:name => name, :email => email,
-      :user_name => user_name, :password => password)
+      :user_name => user_name, :password => password, :locale => locale)
 
     puts "User `#{user_name}' created: ##{user.id}"
   end
@@ -73,5 +74,12 @@ namespace :user do
     user = User.find(ENV['USER_ID'])
     user.subscriptions.delete(subscription)
     puts "user `#{user.user_name}' revoked access to subscription ##{subscription.id}"
+  end
+
+  desc "Change a user locale (USER_ID env var, USER_LOCALE env var)."
+  task :locale => :environment do
+    user = User.find(ENV['USER_ID'])
+    user.update_attribute(:locale, ENV['USER_LOCALE'])
+    puts "user `#{user.user_name}' locale changed to #{user.locale}"
   end
 end
