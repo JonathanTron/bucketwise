@@ -9,7 +9,7 @@ namespace :user do
     email = ui.ask("E-mail: ")
     user_name = ui.ask("User name: ")
     password = ui.ask("Password: ")
-    locale = ui.ask("Locale (en, fr, ...) :")
+    locale = ui.ask("Locale (#{I18n.available_locales.join(",")}) :")
 
     user = User.create(:name => name, :email => email,
       :user_name => user_name, :password => password, :locale => locale)
