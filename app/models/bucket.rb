@@ -60,7 +60,7 @@ class Bucket < ActiveRecord::Base
     { :joins => "LEFT OUTER JOIN line_items ON line_items.bucket_id = buckets.id",
       :select => "buckets.*, SUM(line_items.amount) as computed_balance",
       :conditions => [conditions.join(" AND "), *parameters],
-      :group => "buckets.id" }
+      :group => columns.map{|c|"#{self.table_name}.#{c.name}"}.join(',') }
   end
 
   def self.default
