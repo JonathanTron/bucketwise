@@ -1,0 +1,200 @@
+fr:
+  $: "$"
+  summary: Récapitulatif
+  log_out: "déconnexion"
+  bucketwise: "BucketWise"
+  bucketwise_version: "BucketWise version: <span class=\"version\">v{{version}} (rev <a href=\"https://github.com/jamis/bucketwise/commit/{{rev}}\">{{rev}}</a>)</span>"
+  last_deployed: "Dernier déploiement: <span class=\"version\">{{last}}</span>"
+  accounts:
+    account: 
+      see_all_buckets: "Voir les {{bucket_size}} réserves"
+    form:
+      Errors: Erreurs
+      account_could_not_be_saved: "Le compte ne peut être sauvé à cause de la/des erreur(s) suivante(s):"
+      account_info: "Information du compte"
+      choose_a_name: "Choisissez un nom"
+      for_this_account: "pour ce compte:"
+      what_kind: "Quel type"
+      of_account_is_this: "de compte est-ce?"
+      Checking: Courant
+      Credit_card: Carte de crédit
+      Other: Autre
+      starting_balance: Solde de départ
+      take_a_look_at_your_latest_statement_for_this_account: "Regardez votre dernier relevé pour ce compte."
+      note_the_current_balance_from_the_statement: "Notez le <em>solde actuel</em> du relevé, ainsi que <em>la date à laquelle ce relevé a été édité</em>, aet entrez les ci-dessous."
+      what_is_the_current_balance: "Quel est le <em>solde actuel<em>:"
+      when_was_the_statement_issued: "<strong>Quand</strong> le relevé a-t-il été edité:"
+      create_this_account: "Créer ce compte"
+      cancel: "annuler"
+    name:
+      resume_reconciling: "Reprendre la reconciliation"
+      reconcile: "Reconcilier"
+      prior_statements: "Relevé antérieur"
+      rename: "Renommer"
+      delete: "Effacer"
+      are_your_sure_you_want_to_delete_this_account: "Etes-vous sûre de vouloir supprimer ce compte ?"
+    show:
+      dashboard: "Tableau de bord"
+      buckets_in_account: "Réserves dans {{account_name}}"
+    update:
+      buckets_in_account: "Réserves dans {{account_name}}"
+      the_account_could_not_be_updated: "Le compte n'a pu être mis à jour :"
+  buckets:
+    bucket_name_for_perma:
+      rename: Renommer
+      delete_merge: "Effacer/Combiner"
+    delete_form:
+      delete_merge: "Effacer/Combiner"
+      to_delete_this_bucket: "Pour effacer cette réserve, vous devrez déplacer les transactions de \"{{bucket_name}}\" dans une autre réserve."
+      please_select_that_other_bucket: "Veuillez sélectionner une autre réserve:"
+      merge_and_delete_this_bucket: "Combiner et effacer cette réserve"
+      or: ou
+      cancel: Annuler
+    index:
+      dashboard: "Tableau de bord"
+      transactions_in_account_name: "Transactions dans {{account_name}}"
+      buckets_in_account_name: "Réserves dans {{account_name}}"
+      include: "Inclut:"
+      expenses: Dépenses
+      deposits: Dépôts
+      reallocations: Réaffectations
+      from: "De:"
+      to: "Vers:"
+      apply_these_critera: "Appliquer ces critères"
+      cancel: "annuler"
+      reset_this_filter: "réinitialiser ce filtre"
+    show:
+      dashboard: "Tableau de bord"
+      transactions_in_account_name: "Transactions dans {{account_name}}"
+      buckets_in_account_name: "Réserves dans {{account_name}}"
+      the_bucket_could_not_be_updated: "La réserve n'a pu être mis à jour :"
+  events:
+    balance:
+      ending_balance: "Solde finale"
+      current_balance: "Solde actuel"
+    form:
+      your_transation_has_been_recorded: "Votre transaction a été enregistré. Vous pouvez en saisir une autre ou {{link}}."
+      close_this_form: "fermer ce formulaire"
+      edit_this_transaction: "Editer la transaction"
+      record_this_transaction: "Enregistrer la transaction"
+      or: ou
+      cancel: annuler
+    form_general:
+      general_information: "Information Générale"
+      when_did_this_expense_occur: "<strong>Quand</strong> cette dépense a-t-elle eu lieu ?"
+      when_did_this_deposit_occur: "<strong>Quand</strong> ce dépôt a-t-il eu lieu ?"
+      when_did_this_transfer_occur: "<strong>Quand</strong> ce transfert a-t-il eu lieu ?"
+      who_received_the_payment: "<strong>Qui</strong> a reçu le paiement ?"
+      where_did_this_deposit_come_from: "<strong>D'où</strong> ce dépôt vient-il ?"
+      what_was_this_transfer_for: "<strong>Pour quoi</strong> ce tranfert a-t-il été effectué ?"
+      recall: "(rappeler)"
+      how_much_was_paid: "<strong>Combien</strong> a été payé ?"
+      how_much_was_deposited: "<strong>Combien</strong> a été déposé ?"
+      how_much_was_transferred: "<strong>Combien</strong> a été transféré ?"
+      got_more_to_say: "Plus à dire ?"
+      add_a_more_verbose_description: "Ajouter une description plus complète..."
+      describe_this_transaction: "Décrivez cette transaction:"
+    form_reallocate:
+      reallocate_funds: "Réallouer des fonds"
+      which_bucket_are_you_reallocating_funds: "<strong>{{verb}}</strong> <strong>quelle réserve</strong> réallouez-vous les fonds?"
+      more_buckets_please: "Plus de réserves, s'il vous plait !"
+    form_section:
+      check: "<strong>Chèque #</strong>"
+      specify_repayment_option: "Specifiez les options de remboursement"
+      money_from_this_bucket_will_be_transferred_to: "L'argent de cette réserve sera transféré vers une réserve \"Aside\", pour être utlisé plus tard pour payé ce crédit."
+      more_buckets_please: "Plus de réserves, s'il vous plait !"
+    form_tags:
+      i_d_like_to_add_tags: "Je souhaite ajouter des tags pour cette transaction..."
+      tags: Tags
+      tags_for_this_transaction: "Tags pour cette transaction:"
+      enter_tag_names: "Entrez les tags, séparés par une virgule, qui s'appliqueront à l'ensemble de cette transaction."
+      i_d_like_to_add_tags_for_parts_of_this_transaction: "Je souhaite ajouter des tags pour une ou plusieurs parties de cette transaction..."
+      specify_an_amount_for_each_tag: "Spécifiez un montant pour chaque tag. Ce montant sera marqué par ce tag."
+      more_tags_please: "Plus de tags, s'il vous plait !"
+    reallocation_item:
+      amount: montant
+    tagged_item:
+      is_tagged_as: "est taggué avec"
+    create:
+      this_transaction_could_not_be_saved: "Cette transaction ne peut être sauvegardé :"
+    edit:
+      edit_transaction: "Editer la transaction"
+    new:
+      new_transaction: "Nouvelle transaction"
+    update:
+      this_transaction_could_not_be_saved: "Cette transacion ne peut être sauvegardé :"
+  sessions:
+    new:
+      log_into_bucketwise: "Se connecter à BucketWise"
+      the_user_name_or_password_you_gave_was_incorrect: "Le nom d'utilisateur ou le mot de passe que vous avez donné est incorrect. Essayez à nouveau."
+      you_have_been_logged_out: "Vous avez été déconnecté."
+      user_name: "Nom d'utilisateur:"
+      password: "Mot de passe:"
+  statements:
+    subtotal:
+      subtotal: "Sous-Total :"
+      remaining: "Restant :"
+    edit:
+      balance_your_statement: "Solder votre relevé"
+      statement_date: "Date du relevé"
+      starting_balance: "Solde au départ"
+      ending_balance: "Solde à la fin"
+      deposits: "Dépôts"
+      checks: "Chèques"
+      other_expenses: "Autres dépenses"
+      congratulations: "Félicitations !"
+      your_records_exactly_match_your_account_statement: "Vos enregistrements correspondent exactement à votre relevé de compte, et tout a été soldé."
+      close_out_this_statement: "Clore ce relevé"
+      save_for_later: "Enregistrer pour plus tard"
+      abort_this_reconciliation: "interrompre la réconciliation"
+      are_you_sure_you_want_to_discard_this_reconciliation: "Etes-vous sûr de vouloir écarter cette réconciliation ?"
+    index:
+      dashboard: "Tableau de bord"
+      here: "ici"
+      previous_statements: "Rélevés Précédents"
+      you_have_not_yet_balanced_this_account_against: "Vous n'avez encore soldé ce compte à partir d'aucun relevé de votre institution financière. Vous pouvez commencer en cliquant {{link}}, pour commencer à solder ce compte."
+    new:
+      lets_reconcile_your_account: "Réconcilier votre compte {{account_name}}"
+      first_take_a_look_at: "D'abord, regardez le relevé de compte de votre banque ou d'une autre institution financière."
+      if_you_havent_reconciled_in_a_while: "Si vous n'avez pas reconcilier depuis longtemps, assurez-vous de commencer avec <em>le plus ancien</em> relevé et travailler à rebours."
+      when_was_the_statement_printed: "<strong>Quand</strong> le relevé a-t-il été imprimé ?"
+      what_is_the_ending_balance: "<strong>Quel</strong> est le solde final ?"
+      go_to_step_2: "Passer à l'étape #2"
+      cancel: "annuler"
+    show:
+      dashboard: "Tableau de bord"
+      prior_statements: "Relevé précédents"
+      delete: "Supprimer"
+      are_you_sure_you_want_to_delete_this_statement: "Etes-vous sûr de vouloir supprimer ce relevé ?"
+      statement_for_period_ending: "Relevé de fin de période"
+  subscriptions:
+    blank_slate:
+      welcome: "Bienvenue dans BucketWise!"
+      to_get_started: "<strong>Pour commencer</strong>, vous aurez besoin de créer au moins un compte (un compte de banque, de carte de crédit, etc). Les \"Comptes\" sont l'endroit où votre argent est réellement."
+      click_here_to_create_your_first_account: "Cliquez ici pour créer votre premier compte"
+      once_you_ve_created: "<strong>Dès que vous aurez crée</strong> votre premier compte, vous pourrez créer d'autre comptes, enregistrer vos transactions, et simplement commencer à avoir vos finances sous contrôle !"
+    index:
+      your_subscriptions: "Vos abonnements"
+    show:
+      expense: "dépense"
+      deposit: "dépôts"
+      transfer: "transfert"
+      record_a_new: "Enregistrer une nouvelle {{expense}}, un {{deposit}}, ou un {{transfer}}"
+      recent_transactions: "Transactions récentes"
+      add_an_account: "Ajouter un compte"
+      accounts_summary: "Résumé des comptes"
+      tags: "Tags"
+  tags:
+    delete_form:
+      delete_merge: "Effacer/Combiner"
+      delete_the_tag: "Effacer le tag \"{{tag_name}}\""
+      merge_the_tag_into: "Combiner le tag \"{{tag_name}}\" dans"
+      delete_this_tag: "Effacer ce tag"
+      cancel: "Annuler"
+      or: ou
+    name:
+      transactions_tagged: "Transactions tagguées \"{{tag_name}}\""
+      rename: "Renommer"
+      delete: "Supprimer"
+    show:
+      dashboard: "Tableau de bord"

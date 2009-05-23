@@ -150,14 +150,16 @@ en:
       are_you_sure_you_want_to_discard_this_reconciliation: "Are you sure you want to discard this reconciliation?"
     index:
       dashboard: "Dashboard"
+      here: "here"
       previous_statements: "Previous Statements"
       you_have_not_yet_balanced_this_account_against: "You have not yet balanced this account against any statements from your financial institution. You may start by clicking {{link}}, to begin balancing this account."
+    new:
       lets_reconcile_your_account: "Let's reconcile your {{account_name}} account"
-      first_take_a_look: "First, take a look at the account statement from your bank or other financial institution."
+      first_take_a_look_at: "First, take a look at the account statement from your bank or other financial institution."
       if_you_havent_reconciled_in_a_while: "If you haven't reconciled in a while, make sure you start with the <em>oldest</em> statement and work forward."
       when_was_the_statement_printed: "<strong>When</strong> was the statement printed?"
       what_is_the_ending_balance: "<strong>What</strong> is the ending balance?"
-      got_to_step_2: "Go to step #2"
+      go_to_step_2: "Go to step #2"
       cancel: "cancel"
     show:
       dashboard: "Dashboard"

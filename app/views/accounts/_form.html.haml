@@ -20,7 +20,7 @@
     %p
       %label
         %strong=t :".what_kind"
-        =t :"of_account_is_this"
+        =t :".of_account_is_this"
         = form.select :role, [[t(:".Checking"), "checking"], [t(:".Credit_card"), "credit-card"], [t(:".Other"), "other"]]
 
   - if form.object.nil? || form.object.new_record?
