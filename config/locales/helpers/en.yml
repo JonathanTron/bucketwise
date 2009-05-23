@@ -1,0 +1,34 @@
+en:
+  to: to
+  from: from
+  helpers:
+    events:
+      more_than_one: "-- More than one --"
+      add_new_bucket: "-- Add a new bucket --"
+      select_an_account: "-- Select an account --"
+      was_drawn_from: "was drawn from"
+      will_be_repaid_from: "will be repaid from"
+      was_deposited_to: "was deposited to"
+      was_transferred_from: "was transferred from"
+      was_transferred_to: "was transferred to"
+      deposit_information: "Deposit Information"
+      which_account_was_this_deposited_to: "<strong>Which account</strong> was this deposited to?"
+      which_bucket_was_this_deposited_to: "<strong>Which bucket</strong> was this deposited to?"
+      this_deposit_was_to_multiple_buckets: "This deposit was to multiple buckets."
+      repayment_options: "Repayment Options"
+      which_account_will_be_used_to_repay_this_credit: "<strong>Which account</strong> will be used to <strong>repay this credit</strong>?"
+      which_bucket_will_be_used_to_repay_this_credit: "<strong>Which bucket</strong> will be used to <strong>repay this credit</strong>?"
+      multiple_buckets_will_be_used_to_repay_this_credit: "Multiple buckets will be used to repay this credit."
+      payment_source: "Payment Source"
+      which_account_was_this_drawn_from: "<strong>Which account</strong> was this drawn from?"
+      which_bucket_was_this_drawn_from: "<strong>Which bucket</strong> was this drawn from?"
+      this_expense_drew_from_multiple_buckets: "This expense drew from multiple buckets."
+      transfer_source: "Transfer Source"
+      which_account_were_funds_transferred_from: "<strong>Which account</strong> were funds transferred <strong>from</strong>?"
+      which_bucket_were_funds_transferred_from: "<strong>Which bucket</strong> were funds transferred from?"
+      this_transfer_pulled_from_multiple_buckets: "This transfer pulled from multiple buckets."
+      transfer_destination: "Transfer Destination"
+      which_account_were_fund_transferred_to: "<strong>Which account</strong> were funds transferred <strong>to</strong>?"
+      which_bucket_were_fund_transferred_to: "<strong>Which bucket</strong> were funds transferred to?"
+      this_transfer_targeted_multiple_buckets: "This transfer targetted multiple buckets."
+      

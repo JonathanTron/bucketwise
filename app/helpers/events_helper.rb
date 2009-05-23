@@ -65,11 +65,11 @@ module EventsHelper
       select_options = options_for_select(
         options[:line_item].account.buckets.sorted.map { |bucket| [bucket.name, bucket.id] },
         options[:line_item].bucket_id)
-      select_options += "<option value='+'>-- More than one --</option>" if splittable
-      select_options += "<option value='++'>-- Add a new bucket --</option>"
+      select_options += "<option value='+'>#{I18n.t(:"helpers.events.more_than_one")}</option>" if splittable
+      select_options += "<option value='++'>#{I18n.t(:"helpers.events.add_new_bucket")}</option>"
       disabled = false
     else
-      select_options = "<option>-- Select an account --</option>"
+      select_options = "<option>#{I18n.t(:"helpers.events.select_an_account")}</option>"
       disabled = true
     end
 
@@ -244,53 +244,49 @@ module EventsHelper
   def bucket_action_phrase_for(section)
     case section.to_sym
     when :payment_source
-      "was drawn from"
+      I18n.t(:"helpers.events.was_drown_from")
     when :credit_options
-      "will be repaid from"
+      I18n.t(:"helpers.events.will_be_repaid_from")
     when :deposit
-      "was deposited to"
+      I18n.t(:"helpers.events.was_deposited_to")
     when :transfer_from
-      "was transferred from"
+      I18n.t(:"helpers.events.was_transferred_from")
     when :transfer_to
-      "was transferred to"
+      I18n.t(:"helpers.events.was_transferred_to")
     else raise ArgumentError, "unsupported form section: #{section.inspect}"
     end
   end
 
   FORM_SECTIONS = {
     :deposit => {
-      :title                => "Deposit Information",
-      :account_prompt       => "<strong>Which account</strong> was this deposited to?",
-      :single_bucket_prompt => "<strong>Which bucket</strong> was this deposited to?",
-      :multi_bucket_prompt  => "This deposit was to multiple buckets."
+      :title                => I18n.t(:"helpers.events.deposit_information"),
+      :account_prompt       => I18n.t(:"helpers.events.which_account_was_this_deposited_to"),
+      :single_bucket_prompt => I18n.t(:"helpers.events.which_bucket_was_this_deposited_to"),
+      :multi_bucket_prompt  => I18n.t(:"helpers.events.this_deposit_was_to_multiple_buckets"),
     },
     :credit_options => {
-      :title                => "Repayment Options",
-      :account_prompt       => "<strong>Which account</strong> will be used to " +
-                               "<strong>repay this credit</strong>?",
-      :single_bucket_prompt => "<strong>Which bucket</strong> will be used to " +
-                               "<strong>repay this credit</strong>?",
-      :multi_bucket_prompt  => "Multiple buckets will be used to repay this credit.",
+      :title                => I18n.t(:"helpers.events.repayment_options"),
+      :account_prompt       => I18n.t(:"helpers.events.which_account_will_be_used_to_repay_this_credit"),
+      :single_bucket_prompt => I18n.t(:"helpers.events.which_bucket_will_be_used_to_repay_this_credit"),
+      :multi_bucket_prompt  => I18n.t(:"helpers.events.multiple_buckets_will_be_used_to_repay_this_credit"),
     },
     :payment_source => {
-      :title                => "Payment Source",
-      :account_prompt       => "<strong>Which account</strong> was this drawn from?",
-      :single_bucket_prompt => "<strong>Which bucket</strong> was this drawn from?",
-      :multi_bucket_prompt  => "This expense drew from multiple buckets."
+      :title                => I18n.t(:"helpers.events.payment_source"),
+      :account_prompt       => I18n.t(:"helpers.events.which_account_was_this_drawn_from"),
+      :single_bucket_prompt => I18n.t(:"helpers.events.which_bucket_was_this_drawn_from"),
+      :multi_bucket_prompt  => I18n.t(:"helpers.events.this_expense_drew_from_multiple_buckets")
     },
     :transfer_from => {
-      :title                => "Transfer Source",
-      :account_prompt       => "<strong>Which account</strong> were funds transferred " +
-                               "<strong>from</strong>?",
-      :single_bucket_prompt => "<strong>Which bucket</strong> were funds transferred from?",
-      :multi_bucket_prompt  => "This transfer pulled from multiple buckets."
+      :title                => I18n.t(:"helpers.events.transfer_source"),
+      :account_prompt       => I18n.t(:"helpers.events.which_account_were_funds_transferred_from"),
+      :single_bucket_prompt => I18n.t(:"helpers.events.which_bucket_were_funds_transferred_from"),
+      :multi_bucket_prompt  => I18n.t(:"helpers.events.this_transfer_pulled_from_multiple_buckets")
     },
     :transfer_to => {
-      :title                => "Transfer Destination",
-      :account_prompt       => "<strong>Which account</strong> were funds transferred " +
-                               "<strong>to</strong>?",
-      :single_bucket_prompt => "<strong>Which bucket</strong> were funds transferred to?",
-      :multi_bucket_prompt  => "This transfer targetted multiple buckets."
+      :title                => I18n.t(:"helpers.events.transfer_destination"),
+      :account_prompt       => I18n.t(:"helpers.events.which_account_were_fund_transferred_to"),
+      :single_bucket_prompt => I18n.t(:"helpers.events.which_bucket_were_fund_transferred_to"),
+      :multi_bucket_prompt  => I18n.t(:"helpers.events.this_transfer_targeted_multiple_buckets")
     }
   }
 
@@ -335,8 +331,8 @@ module EventsHelper
 
   def reallocation_verbs_for(section)
     case section.to_sym
-    when :reallocate_to   then %w(to from)
-    when :reallocate_from then %w(from to)
+    when :reallocate_to   then [I18n.t(:"to"), I18n.t(:"from")]
+    when :reallocate_from then [I18n.t(:"from"), I18n.t(:"to")]
     else
       raise ArgumentError, "unsupported section #{section.inspect} for reallocation_verbs_for"
     end

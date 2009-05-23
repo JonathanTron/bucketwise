@@ -1,5 +1,5 @@
 fr:
-  $: "$"
+  $: "€"
   summary: Récapitulatif
   log_out: "déconnexion"
   bucketwise: "BucketWise"

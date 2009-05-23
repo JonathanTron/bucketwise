@@ -1,0 +1,33 @@
+fr:
+  to: de
+  from: vers
+  helpers:
+    events:
+      more_than_one: "-- Plus d'un seul --"
+      add_new_bucket: "-- Ajouter une nouvelle réserve --"
+      select_an_account: "-- Selectionnez un compte --"
+      was_drawn_from: "a été pris de"
+      will_be_repaid_from: "sera remboursé à partir de"
+      was_deposited_to: "a été deposé sur"
+      was_transferred_from: "a été transféré de"
+      was_transferred_to: "a été transféré vers"
+      deposit_information: "Information sur le dépôt"
+      which_account_was_this_deposited_to: "Sur <strong>quel compte</strong> a-t-il été déposé ?"
+      which_bucket_was_this_deposited_to: "Sur <strong>quel réserve</strong> a-t-il été déposé ?"
+      this_deposit_was_to_multiple_buckets: "Ce dépôt a été vers plusieurs réserves."
+      repayment_options: "Options de remboursement"
+      which_account_will_be_used_to_repay_this_credit: "<strong>Quel compte</strong> sera utilisé pour <strong>rembourser ce crédit</strong> ?"
+      which_bucket_will_be_used_to_repay_this_credit: "<strong>Quel réserve</strong> sera utilisée pour <strong>rembourser ce crédit</strong>?"
+      multiple_buckets_will_be_used_to_repay_this_credit: "Plusieurs réserves serviront à rembourser ce crédit."
+      payment_source: "Source du paiement"
+      which_account_was_this_drawn_from: "De <strong>quel compte</strong> vient-elle ?"
+      which_bucket_was_this_drawn_from: "De <strong>quelle réserve</strong> vient-elle ?"
+      this_expense_drew_from_multiple_buckets: "Cette dépense vient de plusieurs réserves."
+      transfer_source: "Source du transfert"
+      which_account_were_funds_transferred_from: "<strong>De quel compte</strong> les fonds ont-ils été transféré ?"
+      which_bucket_were_funds_transferred_from: "<strong>De quelle réserve</strong> les fonds ont-ils été transféré ?"
+      this_transfer_pulled_from_multiple_buckets: "Ce transfer vient de plusieurs réservers."
+      transfer_destination: "Destination du transfert"
+      which_account_were_fund_transferred_to: "<strong>Vers quel compte</strong> les fonds ont-ils été transféré ?"
+      which_bucket_were_fund_transferred_to: "<strong>Vers quel réserve</strong> les fonds ont-ils été transféré ?"
+      this_transfer_targeted_multiple_buckets: "Ce transfert vise plusieurs réserves."
