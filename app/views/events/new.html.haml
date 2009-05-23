@@ -4,6 +4,6 @@
   Events.defaultDate = #{Date.today.to_json};
 
 #data.content
-  %h2 New transaction
+  %h2=t(:".new_transaction")
 
   .transaction.form{:class => @event.role.to_s}= render :partial => "events/form"

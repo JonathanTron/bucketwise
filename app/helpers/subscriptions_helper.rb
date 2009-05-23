@@ -22,11 +22,6 @@ module SubscriptionsHelper
   end
 
   def format_amount(amount)
-    amount = amount.abs
-
-    dollars = amount / 100
-    cents   = amount % 100
-
-    "$%s.%02d" % [number_with_delimiter(dollars), cents]
+    number_to_currency(amount.abs / 100.0)
   end
 end

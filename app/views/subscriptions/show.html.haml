@@ -1,9 +1,6 @@
 #links.header{:style => visible?(!blank_slate?)}
-  %h2== Record a new |
-      #{link_to_function "expense", "Events.revealExpenseForm()", :id => "expense_link"}, |
-      #{link_to_function "deposit", "Events.revealDepositForm()", :id => "deposit_link"}, or |
-      #{link_to_function "transfer", "Events.revealTransferForm()", :id => "transfer_link"} |
-
+  %h2=t(:".record_a_new", :expense => link_to_function(t(:".expense"), "Events.revealExpenseForm()", :id => "expense_link"), :deposit => link_to_function(t(:".deposit"), "Events.revealDepositForm()", :id => "deposit_link"), :transfer => link_to_function(t(:".transfer"), "Events.revealTransferForm()", :id => "transfer_link"))
+                          
 #new_event.transaction.form{:style => "display: none"}= render :partial => "events/form"
 
 - if blank_slate?
@@ -12,16 +9,16 @@
 #new_account.form{:style => "display: none"}= render :partial => "accounts/form"
 
 #data.content{:style => visible?(!blank_slate?)}
-  %h2 Recent transactions
+  %h2=t(:".recent_transactions")
 
   %table#recent_entries.entries= render(subscription.events.recent.last)
 
   %h2#accounts_summary_header
-    %span.actions= link_to_function "Add an account", "Accounts.revealForm()"
-    Accounts summary
+    %span.actions= link_to_function t(:".add_an_account"), "Accounts.revealForm()"
+    =t(:".accounts_summary")
 
   %table#accounts_summary= render(subscription.accounts)
 
   - if subscription.tags.any?
-    %h2 Tags
+    %h2=t(:".tags")
     = render :partial => "tags/cloud"

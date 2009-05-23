@@ -1,34 +1,35 @@
 %fieldset#general_information
-  %legend General Information
+  %legend=t(:".general_information")
 
   %p
-    %span.expense_label <strong>When</strong> did this expense occur?
-    %span.deposit_label <strong>When</strong> did this deposit occur?
-    %span.transfer_label <strong>When</strong> did this transfer occur?
+    %span.expense_label=t(:".when_did_this_expense_occur")
+    %span.deposit_label=t(:".when_did_this_deposit_occur")
+    %span.transfer_label=t(:".when_did_this_transfer_occur")
     = form.calendar_date_select :occurred_on, :size => 10
 
   %p
-    %span.expense_label <strong>Who</strong> received the payment?
-    %span.deposit_label <strong>Where</strong> did this deposit come from?
-    %span.transfer_label <strong>What</strong> was this transfer for?
+    %span.expense_label=t(:".who_received_the_payment")
+    %span.deposit_label=t(:".where_did_this_deposit_come_from")
+    %span.transfer_label=t(:".what_was_this_transfer_for")
     = form.text_field :actor_name, :size => 30
     - if form.object.new_record?
-      %span#recall_event{:style => "display: none"}= link_to_function "(recall)", "Events.recallEvent(#{subscription_events_path(subscription).to_json})"
+      %span#recall_event{:style => "display: none"}= link_to_function t(:".recall"), "Events.recallEvent(#{subscription_events_path(subscription).to_json})"
 
   #event_actor_name_select.autocomplete_select{:style => "display: none"}
   = javascript_tag "Events.autocompleteActorField()"
 
   %p
-    %span.expense_label <strong>How much</strong> was paid?
-    %span.deposit_label <strong>How much</strong> was deposited?
-    %span.transfer_label <strong>How much</strong> was transferred?
-    == $#{text_field_tag :amount, event_amount_value, :size => 8, :id => "expense_total", :class => "number", :onchange => "Events.updateUnassigned()"}
+    %span.expense_label=t(:".how_much_was_paid")
+    %span.deposit_label=t(:".how_much_was_deposited")
+    %span.transfer_label=t(:".how_much_was_transferred")
+    =t(:"$")
+    = text_field_tag :amount, event_amount_value, :size => 8, :id => "expense_total", :class => "number", :onchange => "Events.updateUnassigned()"
 
   %p#memo_link{:style => visible?(!event_wants_memo?)}
-    <strong>Got more to say?</strong>
-    = link_to_function "Add a more verbose description...", "Events.revealMemo()"
+    %strong=t(:".got_more_to_say")
+    = link_to_function t(:".add_a_more_verbose_description"), "Events.revealMemo()"
 
   %p#memo{:style => visible?(event_wants_memo?)}
-    Describe this transaction:
+    =t(:".describe_this_transaction")
     %br
     = form.text_area :memo, :rows => 2, :cols => 70

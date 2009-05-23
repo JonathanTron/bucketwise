@@ -1,47 +1,51 @@
 - form_for(:account, @account, :url => subscription_accounts_path(subscription), :html => { :onsubmit => "if(!Accounts.submit()) return false", :id => "new_account_form" }) do |form|
   - if form.object && !form.object.errors.empty?
     %fieldset.errors
-      %legend Errors
+      %legend=t :".Errors"
 
-      %p The account could not be saved because of the following error(s):
+      %p=t :".account_could_not_be_saved"
       %ul
         - form.object.errors.each_full do |message|
           %li&= message
 
   %fieldset
-    %legend Account info
+    %legend=t :".account_info"
 
     %p
-      %label{:for => "account_name"} <strong>Choose a name</strong> for this account:
+      %label{:for => "account_name"}
+        %strong=t :".choose_a_name"
+        =t :".for_this_account"
       = form.text_field :name, :class => "text"
 
     %p
       %label
-        <strong>What kind</strong> of account is this?
-        = form.select :role, [["Checking", "checking"], ["Credit card", "credit-card"], ["Other", "other"]]
+        %strong=t :".what_kind"
+        =t :"of_account_is_this"
+        = form.select :role, [[t(:".Checking"), "checking"], [t(:".Credit_card"), "credit-card"], [t(:".Other"), "other"]]
 
   - if form.object.nil? || form.object.new_record?
     %fieldset
-      %legend Starting balance
+      %legend=t :".starting_balance"
 
       .instructions
-        %p <b>Take a look at your latest statement for this account.</b>
-        %p Note the <em>current balance</em> from the statement, as |
-          well as the <em>date the statement was issued</em>, and enter |
-          them below. |
+        %p
+          %b=t :".take_a_look_at_your_latest_statement_for_this_account"
+        %p
+          =t(:".note_the_current_balance_from_the_statement")
       = hidden_field_tag "account[starting_balance][amount]", ""
 
       %p
         %label
-          What is the <strong>current balance</strong>:
-          == $#{text_field_tag :current_balance, account_starting_balance_amount, :class => "number", :size => 8}
+          =t :".what_is_the_current_balance"
+          =t :"$"
+          = text_field_tag :current_balance, account_starting_balance_amount, :class => "number", :size => 8
 
       %p
         %label
-          <strong>When</strong> was the statement issued:
+          =t :".when_was_the_statement_issued"
           = calendar_date_select_tag "account[starting_balance][occurred_on]", account_starting_balance_occurred_on, :size => 9
 
   %p
-    = submit_tag "Create this account"
+    = submit_tag t(:".create_this_account")
     or
-    = link_to_function "cancel", "Accounts.hideForm()"
+    = link_to_function t(:".cancel"), "Accounts.hideForm()"

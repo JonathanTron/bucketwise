@@ -1,11 +1,7 @@
-%h2 Welcome to BucketWise!
+%h2=t(:".welcome")
 
-%p <strong>To get started</strong>, you'll need to create at least one account |
-  (a bank account, credit card account, etc). "Accounts" are where your money is |
-  actually stored. |
+%p=t(:".to_get_started")
 
-%p.create== [ #{link_to_function("Click here to create your first account", "Accounts.revealForm()")} ]
+%p.create== [ #{link_to_function(t(:".click_here_to_create_your_first_account"), "Accounts.revealForm()")} ]
 
-%p <strong>Once you've created</strong> your first account, you can create more accounts, |
-  record transactions, and basically get on with keeping your finances |
-  under control! |
+%p=t(:".once_you_ve_created")

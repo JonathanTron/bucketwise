@@ -1,5 +1,5 @@
 #data.content
-  %h2== Balance your statement
+  %h2=t(:".balance_your_statement")
 
   .statement.edit.form
 
@@ -7,17 +7,17 @@
 
       %table.general
         %tr
-          %th.occurred_on Statement date
-          %th.starting_balance Starting balance
-          %th.ending_balance Ending balance
+          %th.occurred_on=t(:".statement_date")
+          %th.starting_balance=t(:".starting_balance")
+          %th.ending_balance=t(:".ending_balance")
         %tr
           %td.occurred_on= form.calendar_date_select :occurred_on, :size => 10
           %td#starting_balance.starting_balance.number= format_cents(statement.starting_balance)
-          %td.ending_balance= "$" + form.text_field(:ending_balance, :size => 8, :class => "number", :value => format_cents(statement.ending_balance, :unit => ""), :onchange => "Statements.updateBalances()")
+          %td.ending_balance= t(:"$") + form.text_field(:ending_balance, :size => 8, :class => "number", :value => format_cents(statement.ending_balance, :unit => ""), :onchange => "Statements.updateBalances()")
         
       - if uncleared.deposits.any?
         %fieldset#deposits
-          %legend Deposits
+          %legend=t(:".deposits")
 
           .uncleared.deposits
             %table= render :partial => "statements/uncleared", :collection => uncleared.deposits
@@ -26,7 +26,7 @@
 
       - if uncleared.checks.any?
         %fieldset#checks
-          %legend Checks
+          %legend=t(:".checks")
 
           .uncleared.checks
             %table= render :partial => "statements/uncleared", :collection => uncleared.checks
@@ -35,7 +35,7 @@
 
       - if uncleared.expenses.any?
         %fieldset#expenses
-          %legend Other expenses
+          %legend=t(:".other_expenses")
 
           .uncleared.expenses
             %table= render :partial => "statements/uncleared", :collection => uncleared.expenses
@@ -43,13 +43,13 @@
           = render :partial => "statements/subtotal", :object => statement.account_items.expenses.sum(&:amount)
 
       #balanced{:style => visible?(statement.balanced?)}
-        %h3 Congratulations!
+        %h3=t(:".congratulations")
 
-        %p Your records exactly match your account statement, and everything balances.
+        %p=t(:".your_records_exactly_match_your_account_statement")
 
-        %p= form.submit "Close out this statement"
+        %p= form.submit t(:".close_out_this_statement")
 
       %p#actions{:style => visible?(!statement.balanced?)}
-        = form.submit "Save for later"
+        = form.submit t(:".save_for_later")
         or
-        = link_to("abort this reconciliation", statement_path(statement), :method => :delete, :confirm => "Are you sure you want to discard this reconciliation?")
+        = link_to(t(:".abort_this_reconciliation"), statement_path(statement), :method => :delete, :confirm => t(:".are_you_sure_you_want_to_discard_this_reconciliation"))

@@ -8,4 +8,4 @@
     %tr.bucket
       %td.more{:colspan => 2}
         &rarr;
-        = link_to "See all #{account.buckets.length} buckets", account_buckets_path(account)
+        = link_to t(:".see_all_buckets", :bucket_size => account.buckets.length), account_buckets_path(account)

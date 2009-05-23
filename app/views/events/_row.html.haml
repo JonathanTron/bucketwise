@@ -1,6 +1,6 @@
 %tr{:id => dom_id(event), :class => cycle('odd', 'even'), :onmouseover => "Events.onMouseOver(#{event.id})", :onmouseout => "Events.onMouseOut(#{event.id})"}
 
-  %td.date= event.occurred_on.strftime("%Y-%m-%d")
+  %td.date=l(event.occurred_on)
 
   %td
     .nubbin{:id => dom_id(event, :nubbin), :style => "display: none"}

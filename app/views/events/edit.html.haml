@@ -2,6 +2,6 @@
   Events.return_to = #{(params[:return_to] || subscription_path(subscription)).to_json};
 
 #data.content
-  %h2 Edit transaction
+  %h2=t(:".edit_transaction")
 
   .transaction.edit.form{:class => @event.role.to_s}= render :partial => "events/form"

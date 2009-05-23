@@ -3,5 +3,5 @@ if bucket.valid?
     :locals => { :bucket => bucket }
 else
   errors = bucket.errors.full_messages.join("\n")
-  page.alert("The bucket could not be updated:\n\n" + errors);
+  page.alert(t(:".the_bucket_could_not_be_updated") + "\n\n" + errors);
 end

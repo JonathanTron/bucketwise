@@ -1,18 +1,18 @@
 - form_tag(tag_path(tag_ref), :method => 'delete', :onsubmit => "return Tags.confirmDelete()") do
   - if possible_receiver_tags.any?
     %fieldset
-      %legend Delete/Merge
+      %legend=t(:".delete_merge")
 
       %label#deleteTagOption.option.selected
         = radio_button_tag(:merge, 'no', true, :onclick => "Tags.selectDeleteTag()")
-        == Delete the "#{h tag_ref.name}" tag
+        =t(:".delete_the_tag", :tag_name => h(tag_ref.name))
 
       %label#mergeTagOption.option
         = radio_button_tag(:merge, 'yes', false, :onclick => "Tags.selectMergeTag()")
-        == Merge the "#{h tag_ref.name}" tag into
+        =t(:".merge_the_tag_into", :tag_name => h(tag_ref.name))
         = select_tag(:receiver_id, "<option></option>" + options_from_collection_for_select(possible_receiver_tags, :id, :name))
 
     %p
-      = submit_tag "Delete this tag"
-      or
-      = link_to_function("Cancel", "Tags.cancelDelete()")
+      = submit_tag t(:".delete_this_tag")
+      = t(:".or")
+      = link_to_function(t(:".cancel"), "Tags.cancelDelete()")

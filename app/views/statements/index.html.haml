@@ -1,17 +1,17 @@
 #data.content
   .navigation
-    = link_to "Dashboard", subscription_path(subscription)
+    = link_to t(:".dashboard"), subscription_path(subscription)
     = link_to h(account.name), account_path(account)
 
-  %h2 Previous Statements
+  %h2=t(:".previous_statements")
 
   - if statements.empty?
-    %p== You have not yet balanced this account against any statements from your financial institution. You may start by clicking #{link_to("here", new_account_statement_path(account))}, to begin balancing this account.
+    %p=t(:".you_have_not_yet_balanced_this_account_against", :link => link_to(t(:".here"), new_account_statement_path(account)))
 
   - else
     %ul
       - statements.each do |statement|
         %li
-          = link_to(statement.occurred_on.strftime("%Y-%m-%d"), statement_path(statement))
+          = link_to(l(statement.occurred_on), statement_path(statement))
           = ":"
           = format_cents(statement.ending_balance)

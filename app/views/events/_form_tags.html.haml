@@ -1,16 +1,16 @@
 %p#tags_collapsed{:style => event_has_tags? ? "display: none" : nil}
   &rarr;
-  = link_to_function "I'd like to add tags for this transaction...", "Events.revealTags()"
+  = link_to_function t(:".i_d_like_to_add_tags"), "Events.revealTags()"
 
 %fieldset#tags{:style => event_has_tags? ? nil : "display: none"}
-  %legend Tags
+  %legend=t(:".tags")
 
   %p
-    Tags for this transaction:
+    =t(:".tags_for_this_transaction")
     %br/
     = text_field_tag "event[tags][list]", tag_list_for_event, :style => "width: 95%"
     %br/
-    %small Enter tag names, separated by commas, that will apply to this entire transaction.
+    %small=t(:".enter_tag_names")
 
   #event_tags_list_select.autocomplete_select{:style => "display: none"}
   :javascript
@@ -18,13 +18,13 @@
 
   %p#tag_items_collapsed{:style => event_has_partial_tags? ? "display: none" : nil}
     &rarr;
-    = link_to_function "I'd like to add tags for parts of this transaction...", "Events.revealPartialTags()"
+    = link_to_function t(:".i_d_like_to_add_tags_for_parts_of_this_transaction"), "Events.revealPartialTags()"
 
   #tag_items{:style => event_has_partial_tags? ? nil : "display: none"}
-    %p Specify an amount for each tag. That amount will then be marked by that tag.
+    %p=t(:".specify_an_amount_for_each_tag")
 
     %ol#tagged_items
       - for_each_partial_tagged_item do |item|
         %li= render :partial => "events/tagged_item", :locals => { :tagged_item => item }
 
-    %p= link_to_function "More tags, please!", "Events.addTaggedItem()"
+    %p= link_to_function t(:".more_tags_please"), "Events.addTaggedItem()"
