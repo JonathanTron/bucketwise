@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
     helper_method :via_api?
     
     def set_locale
-      I18n.locale = locale_from_user(user) if user.locale.present?
+      I18n.locale = locale_from_user(@user) if @user && @user.locale.present?
     end
   private
 
