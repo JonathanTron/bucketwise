@@ -21,7 +21,12 @@
       %label
         %strong=t :".what_kind"
         =t :".of_account_is_this"
-        = form.select :role, [[t(:".Checking"), "checking"], [t(:".Credit_card"), "credit-card"], [t(:".Other"), "other"]]
+        = form.select :role, [[t(:".Checking"), "checking"], [t(:".Credit_card"), "credit-card"], [t(:".Other"), "other"]], {}, :onchange => "Accounts.showOrHideCreditLimit(this.value);"
+
+    %p{:style => 'display: none;', :id => 'credit_limit_div'}
+      %label
+        What is the <strong>credit limit</strong>:
+        == $#{form.text_field :limit, :class => "number", :size => 8}
 
   - if form.object.nil? || form.object.new_record?
     %fieldset
