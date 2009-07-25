@@ -25,6 +25,7 @@ fr:
       what_is_the_current_balance: "Quel est le <em>solde actuel<em>:"
       when_was_the_statement_issued: "<strong>Quand</strong> le relevé a-t-il été edité:"
       create_this_account: "Créer ce compte"
+      or: ou
       cancel: "annuler"
     name:
       resume_reconciling: "Reprendre la reconciliation"
